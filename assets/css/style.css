@@ -1,0 +1,29 @@
+#header_title {
+    color: maroon;
+    font-size: 1.75rem;
+}
+
+#sidebar {
+    position: fixed;
+    right: 0;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: grey;
+}
+
+.main_body {
+    overflow: auto;
+}
+
+.carousel-inner {
+    height: 90vh;
+    background-color: black;
+}
