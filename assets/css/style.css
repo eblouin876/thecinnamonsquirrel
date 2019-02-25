@@ -26,6 +26,10 @@
     height: calc(100vh - 5.25rem) !important;
 }
 
+h2 {
+    padding: .75rem;
+}
+
 
 /* Carousel Modifications */
 .carousel-inner {
@@ -61,6 +65,7 @@
     padding: 1rem;
     color: grey;
 }
+
 
 
 
