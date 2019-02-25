@@ -35,6 +35,7 @@
 .carousel-inner {
     height: calc(100vh - 3.4375rem);
     background-color: black;
+    margin-top: 3.4375rem;
 }
 
 .carousel-item {
