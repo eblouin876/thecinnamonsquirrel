@@ -200,10 +200,30 @@
 
             <!-- Sidebar! -->
             <div class="col-12 col-md-4 col-lg-3" id="sidebar">
-                <h2>Let's put some text here and see what it does!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tempore totam fugit animi ad saepe. Laudantium consequatur, ducimus inventore cupiditate tempora officiis tempore reiciendis temporibus ullam iusto alias voluptatum dolorem!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aperiam laboriosam fuga distinctio quaerat ab esse ducimus, obcaecati labore corrupti dolorem eaque incidunt at voluptatibus. Rerum neque tempore labore nesciunt.
-                </h2>
+
+                <div class="row topic_section">
+                    <div class="col">
+                        <h2>
+                            Topics:
+                        </h2>
+                            <a href="#" class="topic_link">Tags that take me</a><br>
+                            <a href="#"class="topic_link">to all articles with</a><br>
+                            <a href="#"class="topic_link">that specic tag</a><br>
+                        
+                    </div>
+                </div>
+
+                <div class="row archive_section">
+                    <div class="col">
+                        <h2>
+                            Archives:
+                        </h2>
+                        <a href="#" class="archive_link">Old Archive Files</a><br>
+                        <a href="#" class="archive_link">Old Archive Files</a><br>
+                        <a href="#" class="archive_link">Old Archive Files</a><br>
+                        <a href="#" class="archive_link">Old Archive Files</a><br>
+                    </div>
+                </div>
             </div>
         </div> 
     </div>
@@ -216,7 +236,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-        // Need to change position to fixed and top to 0 when window.pageYOffset = view height + width of header
+        // Sticky sidebar that comes in after the carousel!
         $(window).scroll(function() {
             let mq = window.matchMedia("(min-width: 768px)");
             let currentScrollPos = window.pageYOffset;

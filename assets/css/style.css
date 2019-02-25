@@ -89,14 +89,6 @@ h2 {
 
 
 
-@media screen and (min-width: 1200px) {
-    .sticky_sidebar {
-        /* right: .75rem !important; */
-    }
-}
-
-
-
 /* Footer Modifications */
 #footer {
     position: absolute;
