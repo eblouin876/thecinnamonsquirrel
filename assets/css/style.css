@@ -57,6 +57,17 @@
 }
 
 
+/* Modifications to article icons */
+.article_img {
+    padding: 1rem;
+}
+
+.article_caption {
+    padding: 1rem;
+    color: grey;
+}
+
+
 /* Need to add flexibility for viewport for small phones - Title must be smaller */
 @media screen and (max-width:640px) {
     #header_title{
@@ -65,5 +76,12 @@
 
     #sidebar {
         position: relative;
+    }
+
+    .article_caption h5 {
+        font-size: 1rem;
+    }
+    .article_caption p {
+        font-size: .75rem;
     }
 }
