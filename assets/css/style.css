@@ -9,28 +9,22 @@
 }
 
 
+
 /* Sidebar Modifications */
 #sidebar {
     position: absolute;
     right: 0;
     color: grey;
-    height: 100%;
     width: 100%;
     overflow: auto;
     padding: 1rem;
 }
 
-
-
-/* Footer Modifications */
-#footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: grey;
+.sticky_sidebar {
+    position: fixed !important;
+    top: 5.25rem !important;
+    height: calc(100vh - 5.25rem) !important;
 }
-
 
 
 /* Carousel Modifications */
@@ -69,8 +63,8 @@
 }
 
 
-/* Need to add flexibility for viewport for small phones - Title must be smaller */
-@media screen and (max-width:640px) {
+
+@media screen and (max-width:768px) {
     #header_title{
         font-size: 1.5rem;
     }
@@ -85,4 +79,24 @@
     .article_caption p {
         font-size: .75rem;
     }
+}
+
+
+
+
+@media screen and (min-width: 1200px) {
+    .sticky_sidebar {
+        /* right: .75rem !important; */
+    }
+}
+
+
+
+/* Footer Modifications */
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: grey;
 }

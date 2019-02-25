@@ -155,54 +155,42 @@
         <div class="row flex-xl-nowrap">
             
             <!-- Image articles -->
-            <div class="col-12 col-lg-9">
+            <div class="col-12 col-md-8 col-lg-9">
                 <div class="row">
 
-                    <div class="col left_imgs">
+                    <div class="col recent_images">
 
                         <div class="article_img">
-                            <a href="#">
-                                <img src="assets/images/squirrel_1.jpg" class="d-block w-100 article_img" alt="squirrel_1">
-                                <div class="caption d-md-block article_caption">
-                                    <h5>Third slide label</h5>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                </div>
-                            </a>
+                            
+                            <img src="assets/images/squirrel_1.jpg" class="d-block w-100 article_img" alt="squirrel_1">
+                            <div class="caption d-md-block article_caption">
+                                <a href="#"><h5>Third slide label</h5></a>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </div>
                         </div>
 
                         <div class="article_img">
-                            <a href="#">
-                                <img src="assets/images/squirrel_3.jpeg" class="d-block w-100 article_img" alt="squirrel_3">
-                                <div class="caption d-md-block article_caption">
-                                    <h5>Third slide label</h5>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-
-                    <div class="col right_imgs">
-
-                        <div class="article_img">
-                            <a href="#">
-                                <img src="assets/images/squirrel_2.jpg" class="d-block w-100 article_img" alt="squirrel_2">
-                                <div class="caption d-md-block article_caption">
-                                    <h5>Third slide label</h5>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                </div>
-                            </a>
+                            <img src="assets/images/squirrel_2.jpg" class="d-block w-100 article_img" alt="squirrel_2">
+                            <div class="caption d-md-block article_caption">
+                                <a href="#"><h5>Third slide label</h5></a>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </div>                            
                         </div>
 
                         <div class="article_img">
-                            <a href="#">
-                                <img src="assets/images/squirrel_4.jpeg" class="d-block w-100 article_img" alt="squirrel_4">
-                                <div class="caption d-md-block article_caption">
-                                    <h5>Third slide label</h5>
-                                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                </div>
-                            </a>
+                            <img src="assets/images/squirrel_3.jpeg" class="d-block w-100 article_img" alt="squirrel_3">
+                            <div class="caption d-md-block article_caption">
+                                <a href="#"><h5>Third slide label</h5></a>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </div>
+                        </div>
+
+                        <div class="article_img">
+                            <img src="assets/images/squirrel_4.jpeg" class="d-block w-100 article_img" alt="squirrel_4">
+                            <div class="caption d-md-block article_caption">
+                                <a href="#"><h5>Third slide label</h5></a>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </div>
                         </div>
 
                     </div>
@@ -211,7 +199,7 @@
             </div>
 
             <!-- Sidebar! -->
-            <div class="col-12 col-md-3" id="sidebar">
+            <div class="col-12 col-md-4 col-lg-3" id="sidebar">
                 <h2>Let's put some text here and see what it does!
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tempore totam fugit animi ad saepe. Laudantium consequatur, ducimus inventore cupiditate tempora officiis tempore reiciendis temporibus ullam iusto alias voluptatum dolorem!
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aperiam laboriosam fuga distinctio quaerat ab esse ducimus, obcaecati labore corrupti dolorem eaque incidunt at voluptatibus. Rerum neque tempore labore nesciunt.
@@ -227,6 +215,23 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        // Need to change position to fixed and top to 0 when window.pageYOffset = view height + width of header
+        $(window).scroll(function() {
+            let mq = window.matchMedia("(min-width: 768px)");
+            let currentScrollPos = window.pageYOffset;
+            let h = window.innerHeight
+            if(mq.matches) {
+                if (currentScrollPos > parseInt($('.carousel-inner').css("height").slice(0, $('.carousel-inner').css("height").length-2))) {
+                    $('#sidebar').addClass("sticky_sidebar")
+                } else {
+                    $('#sidebar').removeClass("sticky_sidebar")
+                }
+            } else {
+                $('#sidebar').removeClass("sticky_sidebar")
+            }
+        });
+    </script>
 </body>
 
 
