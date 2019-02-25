@@ -1,16 +1,26 @@
+/* Header Modifications */
 #header_title {
     color: maroon;
     font-size: 1.75rem;
 }
 
+#nav_bar {
+    max-width: 100vw;
+}
+
+
+/* Sidebar Modifications */
 #sidebar {
-    position: fixed;
+    position: absolute;
     right: 0;
     background-color: black;
     height: 100%;
     width: 100%;
 }
 
+
+
+/* Footer Modifications */
 #footer {
     position: absolute;
     bottom: 0;
@@ -19,11 +29,39 @@
     background-color: grey;
 }
 
-.main_body {
-    overflow: auto;
+
+
+/* Carousel Modifications */
+.carousel-inner {
+    height: calc(100vh - 3.4375rem);
+    background-color: black;
 }
 
-.carousel-inner {
-    height: 90vh;
-    background-color: black;
+.carousel-item {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.carousel_row {
+    margin: 0;
+}
+
+#carousel_container {
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+
+/* Need to add flexibility for viewport for small phones - Title must be smaller */
+@media screen and (max-width:640px) {
+    #header_title{
+        font-size: 1.5rem;
+    }
+
+    #sidebar {
+        position: relative;
+    }
 }
